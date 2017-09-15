@@ -10,18 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using FirstFloor.ModernUI.Windows.Controls;
 
-namespace SAWPenerimaanPegawai
+namespace SAWPenerimaanPegawai.Form
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Report.xaml
     /// </summary>
-    public partial class MainWindow : ModernWindow
+    public partial class Report : Window
     {
-        public MainWindow()
+        public Report()
         {
             InitializeComponent();
         }

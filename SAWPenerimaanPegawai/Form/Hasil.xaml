@@ -1,0 +1,92 @@
+﻿<mui:ModernWindow x:Class="SAWPenerimaanPegawai.Form.Hasil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        xmlns:local="clr-namespace:SAWPenerimaanPegawai.Form"
+        Style="{StaticResource BlankWindow}"
+        mc:Ignorable="d"
+        Title="Hasil" WindowState="Maximized">
+    <Window.Background>
+        <ImageBrush ImageSource="/SAWPenerimaanPegawai;component/Images/form1.jpg"/>
+    </Window.Background>
+    <Window.Resources>
+        <Style x:Key="myLabel" TargetType="Label">
+            <Setter Property="Margin" Value="0 0 0 0"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="myTextBox" TargetType="TextBox">
+            <Setter Property="Width" Value="175"/>
+            <Setter Property="Margin" Value="0 5 0 0"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style x:Key="myCombo" TargetType="ComboBox">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="7"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style x:Key="myDatePicker" TargetType="DatePicker">
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Margin" Value="7"/>
+            <Setter Property="Height" Value="20"/>
+        </Style>
+        <Style x:Key="myWrapPanel" TargetType="WrapPanel">
+            <Setter Property="Margin" Value="7"/>
+            <Setter Property="Height" Value="20"/>
+        </Style>
+        <Style x:Key="myRadioButton" TargetType="RadioButton">
+
+        </Style>
+        <Style x:Key="btnAdd" TargetType="Button">
+            <Setter Property="Foreground" Value="white"/>
+            <Setter Property="Background" Value="#FF4ED37C"/>
+            <Setter Property="Height" Value="30"/>
+        </Style>
+        <Style x:Key="btnCancel" TargetType="Button">
+            <Setter Property="Foreground" Value="white"/>
+            <Setter Property="Background" Value="#FFEC6726"/>
+            <Setter Property="Height" Value="30"/>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <Label Content="HASIL PERHITUNGAN SAW" Style="{StaticResource myLabel}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <DataGrid Background="{x:Null}" ItemsSource="{Binding SourceHasilSAW}" CanUserAddRows="False" AutoGenerateColumns="False" SelectedItem="{Binding Selected}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Kode Registrasi" Binding="{Binding KodeRegistrasi}"/>
+                    <DataGridTextColumn Header="Nama" Binding="{Binding Nama}"/>
+                    <DataGridTextColumn Header="Kelengkapan Berkas" Binding="{Binding Berkas}"/>
+                    <DataGridTextColumn Header="Kesehatan" Binding="{Binding Kesehatan}"/>
+                    <DataGridTextColumn Header="Akademik" Binding="{Binding _Akademiks}"/>
+                    <DataGridTextColumn Header="Psikotes" Binding="{Binding _Psikotess}"/>
+                    <DataGridTextColumn Header="Wawancara" Binding="{Binding Wawancara}"/>
+                    <DataGridTextColumn Header="Hasil SAW" Binding="{Binding NilaiAkhir}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="60*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Grid.Row="0">
+                    <Button Content="Cetak" Command="{Binding TambahNilai}" CommandParameter="1"  Background="#FF4ED37C"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</mui:ModernWindow>

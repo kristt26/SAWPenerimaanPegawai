@@ -5,16 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:mui="http://firstfloorsoftware.com/ModernUI"
         xmlns:local="clr-namespace:SAWPenerimaanPegawai"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Window.Background>
-        <ImageBrush ImageSource="Images/telkom1.jpg"/>
-    </Window.Background>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="27*"/>
-        </Grid.RowDefinitions>
+        mc:Ignorable="d" 
+        Title="MainWindow" WindowState="Maximized" Background="{x:Null}" ContentSource="Form/MainPage.xaml">
 
-    </Grid>
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="Home"  >
+            <mui:LinkGroup.Links >
+                <mui:Link DisplayName="Data Pegawai" Source="Form/Pegawai.xaml" />                
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="Data Pelamar" >
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Data Calon Siswa" Source="Pages/DataCalonSiswa.xaml" />
+                <mui:Link DisplayName="Nilai Calon Siswa" Source="Pages/NilaiSiswa.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="Nilai" >
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Data Nilai" Source="Form/DataNilai.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="Laporan" >
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Sample Additive Wighted" Source="Form/PerhitunganSAW.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+
+
 </mui:ModernWindow>
