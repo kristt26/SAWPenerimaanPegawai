@@ -44,7 +44,7 @@
             </Grid>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="2">
-            <DataGrid Grid.Row="2" Grid.Column="0" Background="{x:Null}" ItemsSource="{Binding SourceViewPelamar}" CanUserAddRows="False" AutoGenerateColumns="False" SelectedItem="{Binding Selected}" >
+            <DataGrid Grid.Row="2" Grid.Column="0" Background="{x:Null}" ItemsSource="{Binding SourceViewPelamar}" CanUserAddRows="False" AutoGenerateColumns="False" SelectedItem="{Binding Selected}" Margin="150,0,200,0" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Id Pelamar" Binding="{Binding IdPelamar}"/>
                     <DataGridTextColumn Header="Kode Registrasi" Binding="{Binding KodeRegistrasi}"/>

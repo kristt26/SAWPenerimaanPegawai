@@ -5,12 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SAWPenerimaanPegawai.Form"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="386.597" d:DesignWidth="710.309"
       Title="MainPage">
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/SAWPenerimaanPegawai;component/Images/telkom1.jpg"/>
+            <ImageBrush ImageSource="/SAWPenerimaanPegawai;component/Images/Backround.png"/>
         </Grid.Background>
 
     </Grid>

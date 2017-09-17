@@ -42,7 +42,7 @@
             </Grid>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="2">
-            <DataGrid Grid.Row="2" Grid.Column="0" Background="{x:Null}" ItemsSource="{Binding SourceDataNilai}" CanUserAddRows="False" AutoGenerateColumns="False" SelectedItem="{Binding Selected}" >
+            <DataGrid Grid.Row="2" Grid.Column="0" Background="{x:Null}" ItemsSource="{Binding SourceDataNilai}" CanUserAddRows="False" AutoGenerateColumns="False" SelectedItem="{Binding Selected}" Margin="210,0,210,0" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Kode Registrasi" Binding="{Binding KodeRegistrasi}"/>
                     <DataGridTextColumn Header="Nama" Binding="{Binding Nama}"/>

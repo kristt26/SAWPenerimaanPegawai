@@ -18,7 +18,6 @@ namespace SAWPenerimaanPegawai.Common
             this.hasilSAW = Hasil();
 
         }
-        
         public List<PelamarMatriks> Matriks_Keputusan { get; private set; }
         public List<PelamarMatriks> NilaiAlternatif { get; private set; }
         public List<PelamarMatriks> hasilSAW { get; private set; }

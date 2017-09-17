@@ -64,18 +64,55 @@
             <Label Content="HASIL PERHITUNGAN SAW" Style="{StaticResource myLabel}"/>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="1">
-            <DataGrid Background="{x:Null}" ItemsSource="{Binding SourceHasilSAW}" CanUserAddRows="False" AutoGenerateColumns="False" SelectedItem="{Binding Selected}">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Kode Registrasi" Binding="{Binding KodeRegistrasi}"/>
-                    <DataGridTextColumn Header="Nama" Binding="{Binding Nama}"/>
-                    <DataGridTextColumn Header="Kelengkapan Berkas" Binding="{Binding Berkas}"/>
-                    <DataGridTextColumn Header="Kesehatan" Binding="{Binding Kesehatan}"/>
-                    <DataGridTextColumn Header="Akademik" Binding="{Binding _Akademiks}"/>
-                    <DataGridTextColumn Header="Psikotes" Binding="{Binding _Psikotess}"/>
-                    <DataGridTextColumn Header="Wawancara" Binding="{Binding Wawancara}"/>
-                    <DataGridTextColumn Header="Hasil SAW" Binding="{Binding NilaiAkhir}"/>
-                </DataGrid.Columns>
-            </DataGrid>
+            <Expander Header="Bobot">
+                <DataGrid Background="{x:Null}" ItemsSource="{Binding SourceViewBobot}" CanUserAddRows="False" AutoGenerateColumns="False" Margin="200,0,200,0" BorderBrush="Black">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Nama Kriteria" Binding="{Binding Nama}" Foreground="#FFEC6726"/>
+                        <DataGridTextColumn Header="Kode Kriteria" Binding="{Binding Code}" Foreground="#FFEC6726"/>
+                        <DataGridTextColumn Header="Bobot" Binding="{Binding Bobot}" Foreground="#FFEC6726"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Expander>
+            <Expander Header="Matriks Keputusan">
+                <DataGrid Background="{x:Null}" ItemsSource="{Binding SourceViewMatriksKeputusan}" CanUserAddRows="False" AutoGenerateColumns="False" SelectedItem="{Binding Selected}" Margin="200,0,200,0" BorderBrush="Black">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Kode Registrasi" Binding="{Binding KodeRegistrasi}"/>
+                        <DataGridTextColumn Header="Nama" Binding="{Binding Nama}"/>
+                        <DataGridTextColumn Header="Kelengkapan Berkas" Binding="{Binding _Berkass}"/>
+                        <DataGridTextColumn Header="Kesehatan" Binding="{Binding _Kesehatans}"/>
+                        <DataGridTextColumn Header="Akademik" Binding="{Binding _Akademiks}"/>
+                        <DataGridTextColumn Header="Psikotes" Binding="{Binding _Psikotess}"/>
+                        <DataGridTextColumn Header="Wawancara" Binding="{Binding _Wawancaras}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Expander>
+            <Expander Header="Matriks Normal">
+                <DataGrid Background="{x:Null}" ItemsSource="{Binding SourceViewMatriksNormal}" CanUserAddRows="False" AutoGenerateColumns="False" SelectedItem="{Binding Selected}" Margin="200,0,200,0" BorderBrush="Black">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Kode Registrasi" Binding="{Binding KodeRegistrasi}"/>
+                        <DataGridTextColumn Header="Nama" Binding="{Binding Nama}"/>
+                        <DataGridTextColumn Header="Kelengkapan Berkas" Binding="{Binding _Berkass}"/>
+                        <DataGridTextColumn Header="Kesehatan" Binding="{Binding _Kesehatans}"/>
+                        <DataGridTextColumn Header="Akademik" Binding="{Binding _Akademiks}"/>
+                        <DataGridTextColumn Header="Psikotes" Binding="{Binding _Psikotess}"/>
+                        <DataGridTextColumn Header="Wawancara" Binding="{Binding _Wawancaras}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Expander>
+            <Expander Header="Hasil Perengkingan" IsExpanded="True">
+                <DataGrid Background="{x:Null}" ItemsSource="{Binding SourceHasilSAW}" CanUserAddRows="False" AutoGenerateColumns="False" SelectedItem="{Binding Selected}" Margin="200,0,200,0" BorderBrush="Black">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Kode Registrasi" Binding="{Binding KodeRegistrasi}"/>
+                        <DataGridTextColumn Header="Nama" Binding="{Binding Nama}"/>
+                        <DataGridTextColumn Header="Kelengkapan Berkas" Binding="{Binding Berkas}"/>
+                        <DataGridTextColumn Header="Kesehatan" Binding="{Binding Kesehatan}"/>
+                        <DataGridTextColumn Header="Akademik" Binding="{Binding _Akademiks}"/>
+                        <DataGridTextColumn Header="Psikotes" Binding="{Binding _Psikotess}"/>
+                        <DataGridTextColumn Header="Wawancara" Binding="{Binding Wawancara}"/>
+                        <DataGridTextColumn Header="Hasil SAW" Binding="{Binding NilaiAkhir}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Expander>            
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="2">
             <Grid>
@@ -84,7 +121,7 @@
                     <ColumnDefinition Width="60*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Grid.Row="0">
-                    <Button Content="Cetak" Command="{Binding TambahNilai}" CommandParameter="1"  Background="#FF4ED37C"/>
+                    <Button Content="Cetak" Command="{Binding Cetak}" CommandParameter="1"  Background="#FF4ED37C"/>
                 </StackPanel>
             </Grid>
         </StackPanel>

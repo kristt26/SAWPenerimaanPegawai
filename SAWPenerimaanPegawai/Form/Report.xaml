@@ -4,7 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SAWPenerimaanPegawai.Form"
+        xmlns:rep="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
         mc:Ignorable="d"
-        Title="Report" Height="300" Width="300">
-    <Grid/>
+        Title="Report" WindowState="Maximized">
+    <Grid>
+        <WindowsFormsHost Margin="10">
+            <rep:ReportViewer x:Name="reportViewer1"></rep:ReportViewer>
+        </WindowsFormsHost>
+    </Grid>
 </Window>

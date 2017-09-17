@@ -12,10 +12,10 @@
     </Page.Background>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="35*"/>
-            <RowDefinition Height="35*"/>
-            <RowDefinition Height="255*"/>
-            <RowDefinition Height="27*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="290*"/>
+            <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="0" Grid.Row="0">
             <Label Content="PROSES SAW" HorizontalContentAlignment="Center" FontSize="20" FontWeight="Bold"/>
@@ -42,7 +42,7 @@
             </Grid>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="2">
-            <DataGrid Grid.Row="2" Grid.Column="0" Background="{x:Null}" ItemsSource="{Binding SourceViewData}" CanUserAddRows="False" AutoGenerateColumns="False" SelectedItem="{Binding Selected}" >
+            <DataGrid Grid.Row="2" Grid.Column="0" Background="{x:Null}" ItemsSource="{Binding SourceViewData}" CanUserAddRows="False" AutoGenerateColumns="False" SelectedItem="{Binding Selected}" Margin="200,0,200,0" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Kode Registrasi" Binding="{Binding KodeRegistrasi}"/>
                     <DataGridTextColumn Header="Nama" Binding="{Binding Nama}"/>
@@ -67,8 +67,8 @@
         <StackPanel Grid.Column="0" Grid.Row="3">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="93*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Grid.Row="0">
                     <Button Content="Add" Command="{Binding Proses}" CommandParameter="1"  Background="#FF4ED37C"/>

@@ -18,6 +18,17 @@ namespace SAWPenerimaanPegawai.ViewModel
             this.dataPelamar = dataPelamar;
             TglLahir = DateTime.Now;
             TambahCommand = new CommandHandler { CanExecuteAction = TambahValidate, ExecuteAction = ProsesTambah };
+            BatalCommand = new CommandHandler { CanExecuteAction = BatalValidation, ExecuteAction = BatalAction };
+        }
+
+        private void BatalAction(object obj)
+        {
+            WindowClose();
+        }
+
+        private bool BatalValidation(object obj)
+        {
+            return true;
         }
 
         private void ProsesTambah(object obj)
@@ -51,6 +62,7 @@ namespace SAWPenerimaanPegawai.ViewModel
 
         public Action WindowClose { get; internal set; }
         public CommandHandler TambahCommand { get; private set; }
+        public CommandHandler BatalCommand { get; set; }
         public pelamar ClonePelamar { get; set; }
         public string Error => throw new NotImplementedException();
     }

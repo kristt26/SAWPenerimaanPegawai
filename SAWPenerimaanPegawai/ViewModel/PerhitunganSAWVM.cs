@@ -50,7 +50,7 @@ namespace SAWPenerimaanPegawai.ViewModel
             var item = obj as pelamar;
             if (!string.IsNullOrEmpty(TahunData))
             {
-                if (item.Tahun.ToString().Contains(TahunData))
+                if (item.Tahun.ToString().Equals(TahunData))
                 {
                     return true;
                 }
@@ -58,7 +58,7 @@ namespace SAWPenerimaanPegawai.ViewModel
                     return false;
             }
             else
-                return true;
+                return false;
         }
 
         private void ProsesAction(object obj)
@@ -77,9 +77,17 @@ namespace SAWPenerimaanPegawai.ViewModel
 
         private bool ProsesValidate(object obj)
         {
-            return true;
+            if (!string.IsNullOrEmpty(TahunData))
+            {
+                if (SourceViewData.Count == 0)
+                    return false;
+                else
+                    return true;
+            }
+            else
+                return false;
         }
-
+       
         public List<PelamarMatriks> DataMatriks()
         {
             var _DataMatriks = new List<PelamarMatriks>();
